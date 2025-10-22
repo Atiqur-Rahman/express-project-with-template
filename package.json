@@ -1,0 +1,28 @@
+{
+  "name": "express-project-with-template",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Atiqur-Rahman",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.38.0",
+    "eslint": "^9.38.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^16.4.0",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2"
+  }
+}
