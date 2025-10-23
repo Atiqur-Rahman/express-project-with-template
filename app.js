@@ -4,6 +4,8 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+const errorController = require('./controllers/error');
+
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
@@ -16,9 +18,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(adminRouter);
 app.use(shopRouter);
 
-app.use((req, res) => {
-  // res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
-  res.status(404).render('404', { pageTitle: 'No Data Found', path: '/' });
-});
+app.use(errorController.get404);
 
 app.listen(3000);
